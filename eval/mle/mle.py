@@ -704,7 +704,7 @@ def _evaluate_regression(train, test, info):
             r2 = r2_score(y_test, pred)
             explained_variance = explained_variance_score(y_test, pred)
             mean_squared = mean_squared_error(y_test, pred)
-            root_mean_squared = mean_squared_error(y_test, pred, squared=False)
+            root_mean_squared = np.sqrt(mean_squared_error(y_test, pred))
             mean_absolute = mean_absolute_error(y_test, pred)
 
             best_scores.append(
