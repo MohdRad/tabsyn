@@ -210,6 +210,7 @@ python eval/eval_density.py --dataname [NAME_OF_DATASET] --model [METHOD_NAME] -
 - $\beta$-recall: the diversity of synthetic data
 
 ```
+conda activate synthcity
 python eval/eval_quality.py --dataname [NAME_OF_DATASET] --model [METHOD_NAME] --path [PATH_TO_SYNTHETIC_DATA]
 ```
 
