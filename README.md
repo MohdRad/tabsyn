@@ -104,6 +104,9 @@ conda activate synthcity
 
 pip install synthcity
 pip install category_encoders
+pip install icecream
+pip install zero
+pip install tomli
 ```
 
 ## Preparing Datasets
