@@ -83,7 +83,11 @@ def update_ema(target_params, source_params, rate=0.999):
 def concat_y_to_X(X, y):
     if X is None:
         return y.reshape(-1, 1)
-    return np.concatenate([y.reshape(-1, 1), X], axis=1)
+    n = np.shape(y)
+    if(len(n)==1):
+        return np.concatenate([y.reshape(-1, 1), X], axis=1)
+    elif(len(n)>1):
+        return np.concatenate([y,X],axis=1)
 
 
 def make_dataset(
